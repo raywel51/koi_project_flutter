@@ -11,7 +11,7 @@ class DateInputWidget extends StatefulWidget {
 }
 
 class _DateInputWidgetState extends State<DateInputWidget> {
-  TextEditingController _dateController = TextEditingController();
+  final TextEditingController _dateController = TextEditingController();
 
   @override
   void initState() {
@@ -40,7 +40,7 @@ class _DateInputWidgetState extends State<DateInputWidget> {
                 labelText: 'Select Date',
                 border: InputBorder.none,
                 suffixIcon: IconButton(
-                  icon: Icon(Icons.calendar_today),
+                  icon: const Icon(Icons.calendar_today),
                   onPressed: () {
                     _selectDate(context);
                   },

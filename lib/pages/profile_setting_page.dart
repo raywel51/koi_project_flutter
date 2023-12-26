@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 import 'package:koi_project/helper/SharedPreferencesHelper.dart';
 
-import '../main.dart';
-import '../model/UserDataModel.dart';
+import '../model/user_data_model.dart';
+import '../services/api_service.dart';
 import '../widget/AvatarWithEditIcon.dart';
 import '../widget/DateInputWidget.dart';
 
@@ -15,6 +14,8 @@ class ProfileSettingPage extends StatefulWidget {
 }
 
 class _ProfileSettingPageState extends State<ProfileSettingPage> {
+
+  final ApiService _apiService = ApiService();
 
   final SharedPreferencesHelper helper = SharedPreferencesHelper();
 
@@ -29,6 +30,7 @@ class _ProfileSettingPageState extends State<ProfileSettingPage> {
   }
 
   Future<void> _initializeData() async {
+
     await helper.initSharedPreferences();
 
     // Save values

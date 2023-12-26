@@ -35,7 +35,7 @@ class _BottomNavigationBarExampleState
 
   static final List<Widget> _widgetOptions = <Widget>[
     const StaticPage(),
-    const HomePage(),
+    HomePage(),
     const ProfilePage(),
   ];
 
